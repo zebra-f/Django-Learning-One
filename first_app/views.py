@@ -38,6 +38,13 @@ def articles_view(request, topic):
     return HttpResponse(articles[topic])
 
 
+def add_view(request, num1, num2):
+    """
+    host/first_app/<num1>/<num2>/
+    """
+    result = num1 + num2
+    return HttpResponse(str(result))
+
 
 
 
