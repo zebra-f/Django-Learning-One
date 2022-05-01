@@ -15,7 +15,7 @@ def simple_view(request):
     """
     host/first_app/
     """
-    return HttpResponse("Simple View")
+    return render(request, 'first_app/example.html')
 
 
 def sports_view(request):
