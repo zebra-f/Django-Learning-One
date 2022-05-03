@@ -49,8 +49,6 @@ def articles_view(request, topic):
     
 #     topic = list(articles.keys())[num]
 #     return HttpResponseRedirect(topic)
-
-
 def articles_redirect_view(request, num):
     if num > len(articles):
         raise Http404()
