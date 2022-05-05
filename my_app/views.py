@@ -17,7 +17,8 @@ def variables_view(request):
             'Jurassic Park': ['Journey to the Island'],
             'Jaws': ['Out to Sea'],
             'Star Wars': ['Binary Sunset', 'Princess Leia\'s Theme']
-        }
+        },
+        'playing': False
     }
 
     return render(request, 'my_app/variables.html', context=variables)
