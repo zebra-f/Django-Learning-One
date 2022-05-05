@@ -1,33 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Variables</h1>
-    <b>{{ first_name }}</b>
-    <b>{{ last_name|upper }}:</b>
+{% extends 'base.html' %}
+{% block content %}
 
-    <ul>
-      {% for key, val in movies_playlist.items %}
-        <li>
-          {{ key }}:
-          <ul>
-            {% for title in val %}
-              <li>{{ title }}</li>
-            {% endfor %}
-          </ul>
-        </li>
-      {% endfor %}
-    </ul>
+<h1>Variables</h1>
+<b>{{ first_name }}</b>
+<b>{{ last_name|upper }}:</b>
 
-    {% if playing %}
-      <h1>Playing</h1>
-    {% else %}
-      <h1>Not Playing</h1>
-    {% endif %}
-  </body>
-</html>
+<ul>
+  {% for key, val in movies_playlist.items %}
+    <li>
+      {{ key }}:
+      <ul>
+        {% for title in val %}
+          <li>{{ title }}</li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+</ul>
+
+{% if playing %}
+  <h1>Playing</h1>
+{% else %}
+  <h1>Not Playing</h1>
+{% endif %}
+
+{% endblock content %}
+
+
+
