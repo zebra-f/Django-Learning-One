@@ -9,7 +9,25 @@
   <body>
     <h1>Variables</h1>
     <b>{{ first_name }}</b>
-    <b>{{ last_name }}</b>
-    <b>{{ playlist.0 }}</b>
+    <b>{{ last_name | upper }}:</b>
+
+    <ul>
+      {% for title in playlist %}
+      <li>{{ title }}</li>
+      {% endfor %}
+    </ul>
+
+    <ul>
+      {% for key, val in movies_playlist.items %}
+      <li>
+        {{ key }}:
+        <ul>
+          {% for title in val %}
+          <li>{{ title }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ul>
   </body>
 </html>
